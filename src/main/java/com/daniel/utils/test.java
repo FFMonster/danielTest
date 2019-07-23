@@ -39,7 +39,7 @@ public class test {
         System.out.println(TWO == z);//true
         System.out.println(ONE.equals(z));//true
 
-        //总结
+        //总结 2019.07.23
         //int 类型的 ( == ). 比较的的是两个int类型对象的数值。
 
         //Integer类型的 ( == ). 比较的是两个Integer类型对象的内存地址是否一致。
