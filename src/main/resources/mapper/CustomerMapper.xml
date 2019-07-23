@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.daniel.dao.CustomerDAO">
+    <resultMap id="customer" type="Customer">
+        <id property="customerId" column="customer_id"/>
+        <result property="customerName" column="customer_name"/>
+        <result property="customerLoginPwd" column="customer_login_pwd"/>
+        <result property="isAuth" column="is_auth"/>
+    </resultMap>
+
+    <insert id="addCustomer" parameterType="customer">
+        INSERT INTO customer (customer_id, customer_name, customer_login_pwd, is_auth)
+            VALUE (#{customerId}, #{customerName}, #{customerLoginPwd}, #{customerLoginPwd})
+    </insert>
+
+    <delete id="deleteCustomerById" parameterType="long">
+        DELETE FROM customer
+        WHERE customer_id = #{customerId}
+    </delete>
+
+    <update id="updateCustomer" parameterType="customer">
+        UPDATE customer
+        SET customer_name = #{customerName}, customer_login_pwd = #{customerLoginPwd}
+        WHERE customer_id = #{customerId}
+    </update>
+
+    <select id="queryById" resultMap="customer" parameterType="long">
+        SELECT customer_name,customer_login_pwd,is_auth FROM customer WHERE customer_id = #{customerId}
+    </select>
+
+    <select id="queryAllCustomer" resultMap="customer">
+        SELECT customer_name,customer_login_pwd,is_auth FROM customer
+    </select>
+</mapper>
