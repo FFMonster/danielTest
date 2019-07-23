@@ -1,6 +1,6 @@
-package com.daniel.utils;
+package com.daniel.utils.compare;
 
-public class test {
+public class IntegerCompare {
     public static void main(String[] args) {
         int x = 12345;
         int y = 12345;
