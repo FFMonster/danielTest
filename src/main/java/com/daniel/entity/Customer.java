@@ -9,6 +9,7 @@ public class Customer {
     public Integer getCustomerId() {
         return CustomerId;
     }
+
     public void setCustomerId(Integer customerId) {
         CustomerId = customerId;
     }
@@ -16,6 +17,7 @@ public class Customer {
     public String getCustomerName() {
         return CustomerName;
     }
+
     public void setCustomerName(String customerName) {
         CustomerName = customerName;
     }
@@ -23,6 +25,7 @@ public class Customer {
     public String getCustomerLoginPwd() {
         return CustomerLoginPwd;
     }
+
     public void setCustomerLoginPwd(String customerLoginPwd) {
         CustomerLoginPwd = customerLoginPwd;
     }
@@ -30,7 +33,12 @@ public class Customer {
     public Integer getIsAuth() {
         return IsAuth;
     }
+
     public void setIsAuth(Integer isAuth) {
         IsAuth = isAuth;
+    }
+
+    public Customer(String customerName) {
+        this.CustomerName = customerName;
     }
 }
