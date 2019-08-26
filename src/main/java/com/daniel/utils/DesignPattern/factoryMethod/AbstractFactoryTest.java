@@ -6,6 +6,8 @@ public class AbstractFactoryTest {
         try {
             Product a;
             Factory af;
+            //在这里获得实际生产product的factory
+            //concreteFactory1  or  concreteFactory2
             af = (Factory) ReadXML.getObject();
             a = af.newProduct();
             a.show();
