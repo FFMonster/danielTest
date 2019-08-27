@@ -1,6 +1,6 @@
 package com.daniel.utils.DesignPattern.factoryMethod;
 
-public class AbstractFactoryTest {
+public class ConcreteFactoryTest {
     public static void main(String[] args) {
 
         try {
